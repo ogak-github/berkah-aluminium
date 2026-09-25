@@ -1,4 +1,6 @@
-@import "tailwindcss";
+/* Only scan src/ so builds are identical everywhere (Vercel uploads have no .git) */
+@import "tailwindcss" source(none);
+@source "./";
 
 @theme {
   --font-sans: "Geomini", ui-sans-serif, system-ui, sans-serif;
