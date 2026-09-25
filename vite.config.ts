@@ -8,8 +8,8 @@ export default defineConfig({
     solidStart(),
     tailwindcss(),
     nitro({
-      // Production server runs on Bun
-      preset: "bun",
+      // No fixed preset: Nitro auto-detects the platform (e.g. Vercel),
+      // and falls back to the Bun server preset when built with Bun locally
       prerender: {
         // Static marketing pages are rendered to HTML at build time (good for SEO + speed)
         routes: ["/", "/layanan", "/portofolio", "/kontak", "/desain"],
