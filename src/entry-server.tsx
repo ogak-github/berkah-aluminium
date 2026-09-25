@@ -15,7 +15,7 @@ export default createHandler(() => (
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Instrument+Serif:ital@0;1&display=swap"
           />
           {assets}
         </head>

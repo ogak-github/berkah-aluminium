@@ -249,8 +249,8 @@ function CabinetSketch() {
         <path d="M110 385 L190 395" stroke-width="1.5" />
         <path d="M110 380 L110 390 M190 390 L190 400" stroke-width="1.5" />
       </g>
-      <text x="130" y="415" class="fill-accent" stroke="none" font-size="13" font-family="Inter Tight">50 cm</text>
-      <text x="340" y="215" class="fill-white/50" stroke="none" font-size="13" font-family="Inter Tight">180 cm</text>
+      <text x="130" y="415" class="fill-accent" stroke="none" font-size="13" font-family="Geomini">50 cm</text>
+      <text x="340" y="215" class="fill-white/50" stroke="none" font-size="13" font-family="Geomini">180 cm</text>
     </svg>
   );
 }
