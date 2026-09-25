@@ -13,8 +13,8 @@
   --color-ink-soft: #1c1c1b;
   --color-mute: #6b6a66;
   --color-line: rgb(15 15 15 / 0.12);
-  --color-accent: #ff4f1f;
-  --color-accent-soft: #ffe1d6;
+  --color-accent: #2b6cee;
+  --color-accent-soft: #dce7fd;
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-spin-slow: spin 18s linear infinite;

@@ -6,13 +6,13 @@ const patterns: Record<string, string> = {
   Lemari:
     "linear-gradient(90deg,#0f0f0f 3px,transparent 3px) 0 0/33.33% 100%, linear-gradient(#0f0f0f 3px,transparent 3px) 0 0/100% 25%, #e6e2da",
   Kanopi:
-    "repeating-linear-gradient(-20deg,#0f0f0f 0 3px,transparent 3px 48px), linear-gradient(160deg,#ffb89f,#e6e2da 70%)",
+    "repeating-linear-gradient(-20deg,#0f0f0f 0 3px,transparent 3px 48px), linear-gradient(160deg,#a9c4f8,#e6e2da 70%)",
   Pintu:
     "linear-gradient(90deg,transparent 30%,#0f0f0f 30% calc(30% + 3px),transparent calc(30% + 3px) 70%,#0f0f0f 70% calc(70% + 3px),transparent calc(70% + 3px)), linear-gradient(180deg,#cfe3e8,#e6e2da)",
   Jendela:
     "linear-gradient(90deg,#0f0f0f 3px,transparent 3px) 0 0/50% 100%, linear-gradient(#0f0f0f 3px,transparent 3px) 0 0/100% 50%, linear-gradient(135deg,#d7e7ea,#f1efea)",
   Aquarium:
-    "linear-gradient(transparent 35%,rgba(255,79,31,.25) 35%), linear-gradient(90deg,#0f0f0f 3px,transparent 3px) 0 0/100% 100%, #e6e2da",
+    "linear-gradient(transparent 35%,rgba(43,108,238,.25) 35%), linear-gradient(90deg,#0f0f0f 3px,transparent 3px) 0 0/100% 100%, #e6e2da",
   Partisi:
     "repeating-linear-gradient(90deg,#0f0f0f 0 3px,transparent 3px 25%), linear-gradient(180deg,#f1efea,#d9d4ca)"
 };
