@@ -2,6 +2,29 @@
 @import "tailwindcss" source(none);
 @source "./";
 
+/* Self-hosted fonts (latin subset): no render-blocking request to Google Fonts */
+@font-face {
+  font-family: "Geomini";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/geomini-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-italic-latin.woff2") format("woff2");
+}
+
 @theme {
   --font-sans: "Geomini", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Geomini", ui-sans-serif, system-ui, sans-serif;
@@ -51,6 +74,21 @@ body {
   transform: none;
 }
 
+/* Above-the-fold variant: starts on first paint, no JS needed */
+[data-reveal="load"],
+.js [data-reveal="load"] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+  animation: reveal-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms) both;
+}
+@keyframes reveal-in {
+  from {
+    opacity: 0.01;
+    transform: translateY(28px);
+  }
+}
+
 /* Subtle film grain for dark sections.
    Kept inside a layer so utilities like `fixed` can still override `position`. */
 @layer components {
@@ -71,6 +109,6 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .js [data-reveal], [data-reveal="load"] { opacity: 1; transform: none; transition: none; animation: none; }
   .animate-marquee, .animate-spin-slow { animation: none; }
 }

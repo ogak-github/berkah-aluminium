@@ -14,13 +14,20 @@ const getObserver = () =>
     { rootMargin: "0px 0px -10% 0px" }
   ));
 
-// Fades its children in once they scroll into view
-export default function Reveal(props: { children: JSX.Element; delay?: number; class?: string }) {
+// Fades its children in once they scroll into view.
+// `immediate` plays a CSS-only entrance on page load instead, for above-the-fold content,
+// so the hero (the LCP element) doesn't stay hidden until JS hydrates.
+export default function Reveal(props: { children: JSX.Element; delay?: number; class?: string; immediate?: boolean }) {
   let el!: HTMLDivElement;
-  onMount(() => getObserver().observe(el));
+  onMount(() => !props.immediate && getObserver().observe(el));
   onCleanup(() => el && observer?.unobserve(el));
   return (
-    <div ref={el} data-reveal class={props.class} style={{ "--reveal-delay": `${props.delay ?? 0}ms` }}>
+    <div
+      ref={el}
+      data-reveal={props.immediate ? "load" : ""}
+      class={props.class}
+      style={{ "--reveal-delay": `${props.delay ?? 0}ms` }}
+    >
       {props.children}
     </div>
   );

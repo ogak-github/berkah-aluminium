@@ -15,14 +15,14 @@ export default function Home() {
 
       {/* Hero */}
       <section class="relative mx-auto max-w-[1400px] px-5 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20">
-        <Reveal>
+        <Reveal immediate>
           <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-medium uppercase tracking-[0.2em] text-mute">
             <span>Workshop aluminium & kaca</span>
             <span>{site.city} — Est. {site.since}</span>
           </div>
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal immediate delay={100}>
           <h1 class="mt-10 font-display text-[clamp(3rem,10.5vw,10rem)] font-bold leading-[0.88] tracking-tighter">
             Kami bentuk{" "}
             <span class="font-serif font-normal italic tracking-normal text-accent">aluminium</span>
@@ -32,7 +32,7 @@ export default function Home() {
         </Reveal>
 
         <div class="mt-14 grid items-end gap-10 md:grid-cols-12">
-          <Reveal delay={200} class="md:col-span-5">
+          <Reveal immediate delay={200} class="md:col-span-5">
             <p class="text-lg leading-relaxed text-mute">
               Lemari, jendela, pintu kaca, kanopi, sampai aquarium. Dirancang sesuai ruangan Anda, dikerjakan tangan
               sendiri di workshop kami.
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <Reveal delay={300} class="flex justify-start md:col-span-7 md:justify-end">
+          <Reveal immediate delay={300} class="flex justify-start md:col-span-7 md:justify-end">
             <A href="/desain" class="group relative grid h-36 w-36 place-items-center md:h-44 md:w-44" aria-label="Buka desainer 3D">
               <svg viewBox="0 0 200 200" class="absolute inset-0 animate-spin-slow">
                 <defs>
