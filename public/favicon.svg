@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="120" fill="#0f0f0f"/>
+  <!-- Main B profile: Architectural Aluminium Kusen & Frame in bone white (#f1efea) -->
+  <path d="M106 96 H266 C342 96 388 134 388 194 C388 234 360 256 320 262 C370 268 404 298 404 354 C404 416 348 416 266 416 H106 Z" fill="#f1efea"/>
+  <!-- Upper Pane: Architectural Glass in signature Electric Cobalt Blue (#2b6cee) -->
+  <rect x="184" y="150" width="130" height="76" rx="14" fill="#2b6cee"/>
+  <!-- Lower Pane: Deep Contrast Interior Hollow (#0f0f0f) -->
+  <rect x="184" y="290" width="144" height="76" rx="14" fill="#0f0f0f"/>
+  <!-- Signature Brand Accent Dot (Berkah.Aluminium in #2b6cee) -->
+  <circle cx="430" cy="112" r="30" fill="#2b6cee"/>
+</svg>
