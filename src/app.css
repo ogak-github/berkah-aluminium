@@ -25,10 +25,39 @@
   src: url("/fonts/instrument-serif-italic-latin.woff2") format("woff2");
 }
 
+/* Metric-matched local fallbacks, so swapping in the web fonts doesn't shift layout (CLS).
+   Values derived from each font's average glyph width and vertical metrics vs Arial / Times New Roman. */
+@font-face {
+  font-family: "Geomini Fallback";
+  src: local("Arial"), local("Liberation Sans"), local("Helvetica");
+  size-adjust: 111%;
+  ascent-override: 95%;
+  descent-override: 13%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Instrument Serif Fallback";
+  font-style: normal;
+  src: local("Times New Roman"), local("Liberation Serif"), local("Times");
+  size-adjust: 85%;
+  ascent-override: 116.5%;
+  descent-override: 36.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Instrument Serif Fallback";
+  font-style: italic;
+  src: local("Times New Roman Italic"), local("Liberation Serif Italic"), local("Times Italic");
+  size-adjust: 92%;
+  ascent-override: 107.5%;
+  descent-override: 33.7%;
+  line-gap-override: 0%;
+}
+
 @theme {
-  --font-sans: "Geomini", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Geomini", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Geomini", "Geomini Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Geomini", "Geomini Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Instrument Serif Fallback", ui-serif, Georgia, serif;
 
   --color-paper: #f1efea;
   --color-paper-dark: #e6e2da;
@@ -80,12 +109,12 @@ body {
   opacity: 1;
   transform: none;
   transition: none;
-  animation: reveal-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms) both;
+  animation: reveal-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms) both;
 }
 @keyframes reveal-in {
   from {
     opacity: 0.01;
-    transform: translateY(28px);
+    transform: translateY(16px);
   }
 }
 

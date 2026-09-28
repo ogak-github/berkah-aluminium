@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --bun vite dev",
-    "build": "bun --bun vite build",
+    "build": "bun --bun vite build && bun scripts/inline-css.ts",
     "start": "bun .output/server/index.mjs",
     "preview": "bun --bun vite preview",
     "typecheck": "tsc --noEmit"
