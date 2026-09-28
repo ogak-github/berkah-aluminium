@@ -7,6 +7,10 @@ import Seo, { LocalBusinessJsonLd } from "~/components/Seo";
 import { projects, services, stats, steps, testimonials } from "~/lib/content";
 import { site, waLink } from "~/lib/site";
 
+// Rendered widths of the 7/12 and 5/12 portfolio cards (container caps at 1400px)
+const wideSizes = "(min-width: 1400px) 760px, (min-width: 768px) 58vw, 100vw";
+const narrowSizes = "(min-width: 1400px) 540px, (min-width: 768px) 42vw, 100vw";
+
 export default function Home() {
   return (
     <>
@@ -150,10 +154,10 @@ export default function Home() {
           </div>
         </Reveal>
         <div class="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-12">
-          <Reveal class="md:col-span-7"><ProjectCard project={projects[0]} /></Reveal>
-          <Reveal class="md:col-span-5 md:mt-32" delay={100}><ProjectCard project={projects[1]} tall /></Reveal>
-          <Reveal class="md:col-span-5" delay={100}><ProjectCard project={projects[2]} tall /></Reveal>
-          <Reveal class="md:col-span-7 md:mt-40"><ProjectCard project={projects[3]} /></Reveal>
+          <Reveal class="md:col-span-7"><ProjectCard project={projects[0]} sizes={wideSizes} /></Reveal>
+          <Reveal class="md:col-span-5 md:mt-32" delay={100}><ProjectCard project={projects[1]} tall sizes={narrowSizes} /></Reveal>
+          <Reveal class="md:col-span-5" delay={100}><ProjectCard project={projects[2]} tall sizes={narrowSizes} /></Reveal>
+          <Reveal class="md:col-span-7 md:mt-40"><ProjectCard project={projects[3]} sizes={wideSizes} /></Reveal>
         </div>
       </section>
 
